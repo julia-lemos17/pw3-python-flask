@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro | Rythma</title>
+
+    <style>
+        body {
+            margin: 0;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: Arial, Helvetica, sans-serif;
+            background: linear-gradient(
+                to bottom,
+                #0F2A44,
+                #4B6A85,
+                #AFC3D9,
+                #E9EEF4
+            );
+        }
+
+        form {
+            background-color: rgba(255, 255, 255, 0.95);
+            padding: 40px;
+            width: 100%;
+            max-width: 380px;
+            border-radius: 16px;
+            box-shadow: 0 20px 40px rgba(15, 42, 68, 0.25);
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 5px;
+            color: #0F2A44;
+        }
+
+        h2 {
+            text-align: center;
+            font-weight: 300;
+            font-size: 14px;
+            margin-bottom: 30px;
+            color: #4B6A85;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 6px;
+            font-size: 14px;
+            color: #1F3B57;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 18px;
+            border-radius: 8px;
+            border: 1px solid #AFC3D9;
+            font-size: 14px;
+        }
+
+        button {
+            width: 100%;
+            padding: 12px;
+            border: none;
+            border-radius: 10px;
+            background-color: #0F2A44;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #4B6A85;
+        }
+    </style>
+</head>
+
+<body>
+
+<form>
+    <h1>Rythma</h1>
+    <h2>Life in rhythm</h2>
+
+    <label>Nome de usuário</label>
+    <input type="text" placeholder="Seu nome">
+
+    <label>E-mail</label>
+    <input type="email" placeholder="email@exemplo.com">
+
+    <label>Senha</label>
+    <input type="password" placeholder="••••••••">
+
+    <button>Criar conta</button>
+</form>
+
+</body>
+</html>

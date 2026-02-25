@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Músicas</title>
+    <style>
+        body {
+            margin: 0;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column; /* empilha título + tabela */
+            justify-content: center;
+            align-items: center;
+            font-family: Arial, Helvetica, sans-serif;
+            background: linear-gradient(
+                to bottom,
+                #0F2A44,
+                #4B6A85,
+                #AFC3D9,
+                #E9EEF4
+            );
+        }
+
+        h1 {
+            margin-bottom: 20px;
+            color: #0F2A44;
+            letter-spacing: 2px;
+        }
+
+        table {
+            width: 90%;
+            max-width: 900px;
+            border-collapse: collapse;
+            background-color: rgba(255, 255, 255, 0.9);
+            box-shadow: 0 15px 30px rgba(15, 42, 68, 0.25);
+            border-radius: 12px;
+            overflow: hidden;
+        }
+
+        td {
+            padding: 14px 18px;
+            text-align: center;
+            border-bottom: 1px solid #AFC3D9;
+            color: #1F3B57;
+        }
+
+        tr:first-child td {
+            background-color: #0F2A44;
+            color: #ffffff;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        tr:nth-child(even) {
+            background-color: #E9EEF4;
+        }
+
+        tr:hover {
+            background-color: #AFC3D9;
+            transition: background-color 0.3s ease;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Rythma — Músicas em Alta</h1>
+
+    <table border="1">
+        <tr><td>Músicas</td><td>Cantor</td><td>Gênero</td><td>Ano de Lançamento</td></tr>
+        <tr><td>Die With a Smile</td><td>Lady Gaga & Bruno Mars</td><td>Pop / Soul</td><td>2024</td></tr>
+        <tr><td>Leão</td><td>Marília Mendonça</td><td>Sertanejo</td><td>2022</td></tr>
+        <tr><td>The Emptiness Machine</td><td>Linkin Park</td><td>Rock</td><td>2024</td></tr>
+        <tr><td>Zóio de Lula</td><td>Charlie Brown Jr.</td><td>Rock Alternativo</td><td>1999</td></tr>
+        <tr><td>Goodness of God</td><td>Bethel Music</td><td>Worship</td><td>2019</td></tr>
+        <tr><td>Me Atraiu</td><td>Gabriela Rocha</td><td>Gospel</td><td>2011</td></tr>
+        <tr><td>Sweater Weather</td><td>The Neighbourhood</td><td>Alternative / Indie</td><td>2013</td></tr>
+    </table>
+
+</body>
+</html>
