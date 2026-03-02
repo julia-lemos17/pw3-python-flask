@@ -6,6 +6,18 @@
     <title>Console</title>
 </head>
 <body>
-    <h1>Bem-Vindo(a) a página de consoles</h1>
+     <a href="/">Voltar</a>
+    <h1>Consoles</h1>
+    <hr>
+    <h2>Console em destaque:</h2>
+    {%for chave,valor in console.items()%}
+    <details>
+        <summary>{{chave}}</summary>
+        <p>{{valor}}</p>
+    </details>
+    {%endfor%}
+
+       
+         
 </body>
 </html>
