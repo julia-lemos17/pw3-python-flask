@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% block content %}
+<main>
+    <h1>Músicas</h1>
+    <h2>Músicas em destaque essa semana</h2>
+    <p>As músicas mais ouvidas pelos usuários:</p>
+    <ul>
+        <li>Música: <strong>{{musica}}</strong></li>
+        <li>Gênero: <strong>{{ genero }}</strong></li>
+        <li>Ano: <strong>{{ ano }}</strong></li>
+        <p>A música {{musica}} foi a mais ouvida da semana!!</p>
+    </ul>
+    <h3>Top Cantores</h3>
+    <ol>
+        {% for cantor in cantores: %}
+        <li>{{ cantor }}</li>
+        {% endfor %}
+    </ol>
+</main>
+{% endblock content %}
