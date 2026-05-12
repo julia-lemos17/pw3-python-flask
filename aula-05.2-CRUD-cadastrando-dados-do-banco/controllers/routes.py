@@ -1,7 +1,7 @@
 # Importando o Flask para a aplicação
 from flask import render_template, request,redirect,url_for
 #importando o model de Games
-from models.database import Game,db
+from models.database import Game,db,Console
 
 # Criando a função principal para inicializar as rotas
 
@@ -84,3 +84,26 @@ def init_app(app):
         #Selecionando todos os jogos da tabela
         games = Game.query.all()
         return render_template('estoque.html',games=games)
+    
+    @app.route('/estoque_console', methods=['GET','POST'])
+    def estoque_console():
+        #Condição para verificar se o usuário está enviando uma requisição do tipo POST(cadastro)
+        if request.method == 'POST':
+            #Realiza o cadastro
+            #Coletando os dados do formulário
+            dado = request.form.to_dict()
+            #Enviando os dados para o model
+            newconsole = Console(
+                dado['nome'],
+                dado['ano'],
+                dado['fabricante'],
+                dado['preco']
+            )
+            #Método do SQLAlchemy para adicionar o novo console ao banco de dados
+            db.session.add(newconsole)
+            #Confirmação
+            db.session.commit()
+            return redirect(url_for('estoque_console'))
+        #Selecionando todos os jogos da tabela
+        consoles = Console.query.all()
+        return render_template('estoque_console.html',consoles=consoles)
