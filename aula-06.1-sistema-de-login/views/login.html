@@ -1,0 +1,26 @@
+{%extends 'base.html' %}
+{% block content %}
+<!-- Pagina de login -->
+ <div class="container col-4">
+    <div class="card mt-4">
+        <div class="card-header">
+            <h3>Login de Usuários</h3>
+        <div class="card-body m-auto"></div>
+    
+            <!-- Formulario -->
+             <form action="{{url_for('login')}}" method="POST">
+                <label>E-mail</label>
+                <input type="email" name="email" class="form-control" placeholder="Insira seu e-mail" required>
+                <label>Senha</label>
+                <input type="password" name="senha" class="form-control" placeholder="Insira sua senha" required>
+                <!-- Botao -->
+                 <br>
+                 <button type="submit" class="btn btn-danger btn-block">Entrar</button>
+             </form>
+             <hr>
+             <!-- Link para se cadastrar -->
+              <h6>Não possui uma conta? <a href="{{url_for('cadastro')}}">Cadastre-se aqui</a></h6>
+        </div>
+    </div>
+ </div>
+ {% endblock %}
